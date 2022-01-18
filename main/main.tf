@@ -41,7 +41,6 @@ module "tf_next" {
 # }
 
 provider "aws" {
-  version = "= 3.37.0"
   region  = var.region
   # profile = var.aws_profile
   access_key = var.aws_key
