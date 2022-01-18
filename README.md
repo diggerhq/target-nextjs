@@ -1,0 +1,1 @@
+Digger template for nextjs apps
