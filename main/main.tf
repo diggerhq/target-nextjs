@@ -32,7 +32,8 @@ module "tf_next" {
   providers = {
     aws.global_region = aws.global_region
   }
-  next_tf_dir = "${path.module}/../nextjs_app"
+  next_tf_dir               = "${path.module}/../nextjs_app"
+  create_image_optimization = false
 }
 
 
@@ -41,8 +42,8 @@ module "tf_next" {
 # }
 
 provider "aws" {
-  region  = var.region
+  region = var.region
   # profile = var.aws_profile
   access_key = var.aws_key
-  secret_key = var.aws_secret  
+  secret_key = var.aws_secret
 }
