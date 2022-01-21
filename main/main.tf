@@ -32,7 +32,7 @@ module "tf_next" {
   providers = {
     aws.global_region = aws.global_region
   }
-  next_tf_dir               = "${path.module}/../nextjs_app"
+  next_tf_dir               = var.app_path
   create_image_optimization = false
 }
 
