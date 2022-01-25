@@ -26,16 +26,53 @@ provider "aws" {
   region = "us-east-1"
 }
 
+locals {
+  {% if environment_config.hostname %}
+    aliases = ["{{environment}}-{{service_name}}.{{environment_config.hostname}}"]
+  {% elif environment_config.dggr_hostname %}
+    aliases = ["{{app_name}}-{{environment}}-{{service_name}}.{{environment_config.dggr_hostname}}"]
+  {% endif %}
+
+  {% if environment_config.acm_certificate_arn_virginia %}
+    acm_certificate_arn = "{{environment_config.acm_certificate_arn_virginia}}"
+  {% else %}
+    acm_certificate_arn = "{{environment_config.dggr_acm_certificate_arn_virginia}}"
+  {% endif %}
+}
+
 module "tf_next" {
   source = "github.com/diggerhq/terraform-aws-next-js"
 
   providers = {
     aws.global_region = aws.global_region
   }
+
+  cloudfront_aliases = local.aliases
+  cloudfront_acm_certificate_arn = local.acm_certificate_arn
   next_tf_dir               = "${path.module}/../nextjs_app"
   create_image_optimization = false
 }
 
+/*
+{% if environment_config.dns_zone_id %}
+  # Creates the DNS record to point on the main CloudFront distribution ID
+  resource "aws_route53_record" "{{service_name}}_website_cdn_root_record" {
+    zone_id = "{{environment_config.dns_zone_id}}"
+    name    = local.{{service_name}}_website_domain
+    type    = "A"
+
+    alias {
+      name                   = aws_cloudfront_distribution.{{service_name}}_website_cdn_root.domain_name
+      zone_id                = aws_cloudfront_distribution.{{service_name}}_website_cdn_root.hosted_zone_id
+      evaluate_target_health = false
+    }
+  }
+
+  output "{{service_name}}_custom_domain" {
+    value = local.{{service_name}}_website_domain
+  }
+{% endif %}
+*/
 
 # The AWS Profile to use
 # variable "aws_profile" {
