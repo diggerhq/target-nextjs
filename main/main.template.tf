@@ -58,7 +58,7 @@ module "tf_next" {
   cloudfront_acm_certificate_arn = local.acm_certificate_arn
   next_tf_dir               = "${path.module}/../nextjs_app"
   create_image_optimization = false
-  deployment_name = "${var.environment}-${random_string.unique_deployment_id}"
+  deployment_name = "${var.environment}-${random_string.unique_deployment_id.result}"
 }
 
 /*
