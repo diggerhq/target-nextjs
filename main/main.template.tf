@@ -40,6 +40,13 @@ locals {
   {% endif %}
 }
 
+resource "random_string" "unique_deployment_id" {
+  length  = 6
+  special = false
+  lower   = true
+  upper   = false
+}
+
 module "tf_next" {
   source = "github.com/diggerhq/terraform-aws-next-js"
 
@@ -51,6 +58,7 @@ module "tf_next" {
   cloudfront_acm_certificate_arn = local.acm_certificate_arn
   next_tf_dir               = "${path.module}/../nextjs_app"
   create_image_optimization = false
+  deployment_name = "${var.environment}-${random_string.unique_deployment_id}"
 }
 
 /*
