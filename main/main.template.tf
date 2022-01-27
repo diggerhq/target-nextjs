@@ -29,9 +29,12 @@ provider "aws" {
 locals {
   {% if environment_config.hostname %}
     aliases = ["{{environment}}-{{service_name}}.{{environment_config.hostname}}"]
+    {{service_name}}_website_domain = "{{environment}}-{{service_name}}.{{environment_config.hostname}}"
+
   {% elif environment_config.dggr_hostname %}
     aliases = ["{{app_name}}-{{environment}}-{{service_name}}.{{environment_config.dggr_hostname}}"]
-  {% endif %}
+    {{service_name}}_dggr_website_domain = "{{app_name}}-{{environment}}-{{service_name}}.{{environment_config.dggr_hostname}}"
+{% endif %}
 
   {% if environment_config.acm_certificate_arn_virginia %}
     acm_certificate_arn = "{{environment_config.acm_certificate_arn_virginia}}"
@@ -61,7 +64,7 @@ module "tf_next" {
   deployment_name = "${var.environment}-${random_string.unique_deployment_id.result}"
 }
 
-/*
+
 {% if environment_config.dns_zone_id %}
   # Creates the DNS record to point on the main CloudFront distribution ID
   resource "aws_route53_record" "{{service_name}}_website_cdn_root_record" {
@@ -70,8 +73,8 @@ module "tf_next" {
     type    = "A"
 
     alias {
-      name                   = aws_cloudfront_distribution.{{service_name}}_website_cdn_root.domain_name
-      zone_id                = aws_cloudfront_distribution.{{service_name}}_website_cdn_root.hosted_zone_id
+      name                   = module.tf_next.cloudfront_domain_name
+      zone_id                = module.tf_next.cloudfront_hosted_zone_id
       evaluate_target_health = false
     }
   }
@@ -80,7 +83,7 @@ module "tf_next" {
     value = local.{{service_name}}_website_domain
   }
 {% endif %}
-*/
+
 
 # The AWS Profile to use
 # variable "aws_profile" {
