@@ -64,12 +64,12 @@ module "tf_next" {
   deployment_name = "${var.environment}-${random_string.unique_deployment_id.result}"
 }
 
-
-{% if environment_config.dns_zone_id %}
-  # Creates the DNS record to point on the main CloudFront distribution ID
-  resource "aws_route53_record" "{{service_name}}_website_cdn_root_record" {
-    zone_id = "{{environment_config.dns_zone_id}}"
-    name    = local.{{service_name}}_website_domain
+{% if environment_config.use_dggr_domain %}
+  # dggr.app domain
+  resource "aws_route53_record" "{{service_name}}_dggr_website_cdn_root_record" {
+    provider = aws.digger
+    zone_id = "{{environment_config.dggr_zone_id}}"
+    name    = local.{{service_name}}_dggr_website_domain
     type    = "A"
 
     alias {
@@ -79,11 +79,10 @@ module "tf_next" {
     }
   }
 
-  output "{{service_name}}_custom_domain" {
-    value = local.{{service_name}}_website_domain
+  output "{{service_name}}_dggr_domain" {
+    value = local.{{service_name}}_dggr_website_domain
   }
 {% endif %}
-
 
 # The AWS Profile to use
 # variable "aws_profile" {
@@ -94,4 +93,14 @@ provider "aws" {
   # profile = var.aws_profile
   access_key = var.aws_key
   secret_key = var.aws_secret
+}
+
+# digger account provider
+provider "aws" {
+  alias = "digger"
+  version = "= 3.45.0"
+  region  = var.region
+  # profile = var.aws_profile
+  access_key = var.digger_aws_key
+  secret_key = var.digger_aws_secret
 }
