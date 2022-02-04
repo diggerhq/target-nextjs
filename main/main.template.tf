@@ -35,7 +35,7 @@ locals {
   {% elif environment_config.dggr_hostname %}
     aliases = ["{{app_name}}-{{environment}}-{{service_name}}.{{environment_config.dggr_hostname}}"]
     {{service_name}}_dggr_website_domain = "{{app_name}}-{{environment}}-{{service_name}}.{{environment_config.dggr_hostname}}"
-{% endif %}
+  {% endif %}
 
   {% if environment_config.acm_certificate_arn_virginia %}
     acm_certificate_arn = "{{environment_config.acm_certificate_arn_virginia}}"
@@ -76,9 +76,7 @@ module "tf_next" {
     }
   }
 
-  output "{{service_name}}_dggr_domain" {
-    value = local.{{service_name}}_dggr_website_domain
-  }
+
 {% endif %}
 
 # digger account provider
