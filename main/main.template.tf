@@ -81,17 +81,6 @@ module "tf_next" {
   }
 {% endif %}
 
-# The AWS Profile to use
-# variable "aws_profile" {
-# }
-
-provider "aws" {
-  region = var.region
-  # profile = var.aws_profile
-  access_key = var.aws_key
-  secret_key = var.aws_secret
-}
-
 # digger account provider
 provider "aws" {
   alias = "digger"
