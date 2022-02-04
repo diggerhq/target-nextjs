@@ -19,11 +19,10 @@ terraform {
   }
 }
 
-# Provider used for creating the Lambda@Edge function which must be deployed
-# to us-east-1 region (Should not be changed)
 provider "aws" {
-  alias  = "global_region"
-  region = "us-east-1"
+  region = var.region
+  access_key = var.aws_key
+  secret_key = var.aws_secret
 }
 
 locals {
@@ -34,7 +33,7 @@ locals {
   {% elif environment_config.dggr_hostname %}
     aliases = ["{{app_name}}-{{environment}}-{{service_name}}.{{environment_config.dggr_hostname}}"]
     {{service_name}}_dggr_website_domain = "{{app_name}}-{{environment}}-{{service_name}}.{{environment_config.dggr_hostname}}"
-{% endif %}
+  {% endif %}
 
   {% if environment_config.acm_certificate_arn_virginia %}
     acm_certificate_arn = "{{environment_config.acm_certificate_arn_virginia}}"
@@ -52,10 +51,6 @@ resource "random_string" "unique_deployment_id" {
 
 module "tf_next" {
   source = "github.com/diggerhq/terraform-aws-next-js"
-
-  providers = {
-    aws.global_region = aws.global_region
-  }
 
   cloudfront_aliases = local.aliases
   cloudfront_acm_certificate_arn = local.acm_certificate_arn
