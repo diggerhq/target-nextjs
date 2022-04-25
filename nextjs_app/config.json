@@ -5,7 +5,13 @@
       "runtime": "nodejs14.x",
       "filename": "lambdas/__NEXT_API_LAMBDA_0.zip",
       "route": "/__NEXT_API_LAMBDA_0"
-    }
+    },
+    "__NEXT_PAGE_LAMBDA_0": {
+      "handler": "now__launcher.launcher",
+      "runtime": "nodejs14.x",
+      "filename": "lambdas/__NEXT_API_LAMBDA_0.zip",
+      "route": "/__NEXT_PAGE_LAMBDA_0"
+    }    
   },
   "staticRoutes": [
     "/404",
