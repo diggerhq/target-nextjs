@@ -9,15 +9,83 @@
     "__NEXT_PAGE_LAMBDA_0": {
       "handler": "now__launcher.launcher",
       "runtime": "nodejs14.x",
-      "filename": "lambdas/__NEXT_API_LAMBDA_0.zip",
+      "filename": "lambdas/__NEXT_PAGE_LAMBDA_0.zip",
       "route": "/__NEXT_PAGE_LAMBDA_0"
-    }    
+    }
   },
   "staticRoutes": [
-    "/404",
-    "/500",
-    "/index",
-    "/person/[id]"
+    "/android-chrome-144x144.png",
+    "/android-chrome-192x192.png",
+    "/android-chrome-256x256.png",
+    "/apple-touch-icon.png",
+    "/browserconfig.xml",
+    "/favicon-16x16.png",
+    "/favicon-32x32.png",
+    "/favicon.ico",
+    "/fonts/Beatrice-Light.otf",
+    "/fonts/Beatrice-Medium.otf",
+    "/fonts/Beatrice-Medium.woff",
+    "/fonts/Beatrice-Regular.otf",
+    "/fonts/Beatrice-Regular.woff",
+    "/fonts/Beatrice-Regular.woff2",
+    "/fonts/fonts.css",
+    "/fonts/kabel_black.ttf",
+    "/fonts/kabel_heavy.ttf",
+    "/images/biking.png",
+    "/images/congratulations-banner.png",
+    "/images/cross.svg",
+    "/images/footprint.png",
+    "/images/gardening.png",
+    "/images/gold-final.png",
+    "/images/gold-standard-logo-final.png",
+    "/images/gold-standard-logo.png",
+    "/images/inhabit-logo.png",
+    "/images/loading-world.gif",
+    "/images/loading.png",
+    "/images/main-image-zorlu.png",
+    "/images/main-image.png",
+    "/images/map-svg.svg",
+    "/images/offsets.png",
+    "/images/pulser-live-blue.gif",
+    "/images/pulser-live-green.gif",
+    "/images/pulser-live.gif",
+    "/images/sdg/sdg_1.png",
+    "/images/sdg/sdg_13.png",
+    "/images/sdg/sdg_3.png",
+    "/images/sdg/sdg_7.png",
+    "/images/sdg/sdg_8.png",
+    "/images/sdg/sdg_9.png",
+    "/images/sdgs/1.png",
+    "/images/sdgs/10.png",
+    "/images/sdgs/11.png",
+    "/images/sdgs/12.png",
+    "/images/sdgs/13.png",
+    "/images/sdgs/14.png",
+    "/images/sdgs/15.png",
+    "/images/sdgs/16.png",
+    "/images/sdgs/17.png",
+    "/images/sdgs/2.png",
+    "/images/sdgs/3.png",
+    "/images/sdgs/4.png",
+    "/images/sdgs/5.png",
+    "/images/sdgs/6.png",
+    "/images/sdgs/7.png",
+    "/images/sdgs/8.png",
+    "/images/sdgs/9.png",
+    "/images/skating.png",
+    "/images/smiley.png",
+    "/images/supply-chain-coming-soon.png",
+    "/images/team.png",
+    "/images/tick.svg",
+    "/images/tracking.png",
+    "/images/un-final2.png",
+    "/images/un-logo-final.png",
+    "/images/un-logo.png",
+    "/images/zorlu-map.png",
+    "/images/zorlu-side-image.jpg",
+    "/mstile-150x150.png",
+    "/site.webmanifest",
+    "/vercel.svg"
   ],
   "routes": [
     {
@@ -37,10 +105,370 @@
       "handle": "filesystem"
     },
     {
-      "src": "^/api/people/?$",
+      "src": "^/_error/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/_error"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/create\\-password/?$",
       "dest": "/__NEXT_API_LAMBDA_0",
       "headers": {
-        "x-nextjs-page": "/api/people"
+        "x-nextjs-page": "/api/create-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/features/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/features"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/forgot\\-password/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/forgot-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/images/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/images"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/interests/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/interests"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/login/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/login"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/offset/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/offset"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/one\\-time\\-payment/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/one-time-payment"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/payment\\-token/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/payment-token"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/places/autocomplete/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/places/autocomplete"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/places/country\\-codes/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/places/country-codes"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/places/geocode/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/places/geocode"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/policy\\-categories/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/policy-categories"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/prices/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/prices"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/projects/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/projects"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/reduce/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/reduce"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/reduction\\-categories/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/reduction-categories"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/reset\\-password/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/reset-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/setup\\-intent/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/setup-intent"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/subscriptions/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/subscriptions"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/verify/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/verify"
+      },
+      "check": true
+    },
+    {
+      "src": "^/blog/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/blog"
+      },
+      "check": true
+    },
+    {
+      "src": "^/data\\-input/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/data-input"
+      },
+      "check": true
+    },
+    {
+      "src": "^/forgot\\-password/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/forgot-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/annual/new/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history/annual/new"
+      },
+      "check": true
+    },
+    {
+      "src": "^(/|/index|)/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/index"
+      },
+      "check": true
+    },
+    {
+      "src": "^/login/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/login"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements"
+      },
+      "check": true
+    },
+    {
+      "src": "^/offers/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/offers"
+      },
+      "check": true
+    },
+    {
+      "src": "^/offset/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/offset"
+      },
+      "check": true
+    },
+    {
+      "src": "^/onboard/change\\-password/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/onboard/change-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/onboard/subscribe/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/onboard/subscribe"
+      },
+      "check": true
+    },
+    {
+      "src": "^/onboarded/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/onboarded"
+      },
+      "check": true
+    },
+    {
+      "src": "^/policy/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/policy"
+      },
+      "check": true
+    },
+    {
+      "src": "^/reset\\-password/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/reset-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/billing/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/billing"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/manage\\-team/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/manage-team"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/offset\\-history/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/offset-history"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/organisation\\-details/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/organisation-details"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/password/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/profile/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/profile"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/personal/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/personal"
+      },
+      "check": true
+    },
+    {
+      "src": "^/verify/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/verify"
       },
       "check": true
     },
@@ -58,29 +486,1294 @@
       "handle": "rewrite"
     },
     {
-      "src": "^/api/people/?$",
-      "dest": "/__NEXT_API_LAMBDA_0",
+      "src": "^/_error/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
       "headers": {
-        "x-nextjs-page": "/api/people"
+        "x-nextjs-page": "/_error"
       },
       "check": true
     },
     {
-      "src": "^/api/people/(?<id>[^/]+?)(?:/)?$",
-      "dest": "/api/people/[id]?id=$id",
-      "check": true
-    },
-    {
-      "src": "^/api/people/\\[id\\]/?$",
+      "src": "^/api/create\\-password/?$",
       "dest": "/__NEXT_API_LAMBDA_0",
       "headers": {
-        "x-nextjs-page": "/api/people/[id]"
+        "x-nextjs-page": "/api/create-password"
       },
       "check": true
     },
     {
-      "src": "^/person/(?<id>[^/]+?)(?:/)?$",
-      "dest": "/person/[id]?id=$id",
+      "src": "^/api/features/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/features"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/forgot\\-password/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/forgot-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/images/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/images"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/interests/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/interests"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/login/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/login"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/offset/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/offset"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/one\\-time\\-payment/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/one-time-payment"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/payment\\-token/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/payment-token"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/places/autocomplete/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/places/autocomplete"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/places/country\\-codes/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/places/country-codes"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/places/geocode/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/places/geocode"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/policy\\-categories/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/policy-categories"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/prices/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/prices"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/projects/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/projects"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/reduce/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/reduce"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/reduction\\-categories/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/reduction-categories"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/reset\\-password/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/reset-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/setup\\-intent/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/setup-intent"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/subscriptions/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/subscriptions"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/verify/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/verify"
+      },
+      "check": true
+    },
+    {
+      "src": "^/blog/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/blog"
+      },
+      "check": true
+    },
+    {
+      "src": "^/data\\-input/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/data-input"
+      },
+      "check": true
+    },
+    {
+      "src": "^/forgot\\-password/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/forgot-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/annual/new/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history/annual/new"
+      },
+      "check": true
+    },
+    {
+      "src": "^(/|/index|)/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/index"
+      },
+      "check": true
+    },
+    {
+      "src": "^/login/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/login"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements"
+      },
+      "check": true
+    },
+    {
+      "src": "^/offers/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/offers"
+      },
+      "check": true
+    },
+    {
+      "src": "^/offset/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/offset"
+      },
+      "check": true
+    },
+    {
+      "src": "^/onboard/change\\-password/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/onboard/change-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/onboard/subscribe/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/onboard/subscribe"
+      },
+      "check": true
+    },
+    {
+      "src": "^/onboarded/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/onboarded"
+      },
+      "check": true
+    },
+    {
+      "src": "^/policy/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/policy"
+      },
+      "check": true
+    },
+    {
+      "src": "^/reset\\-password/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/reset-password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/billing/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/billing"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/manage\\-team/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/manage-team"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/offset\\-history/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/offset-history"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/organisation\\-details/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/organisation-details"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/password/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/password"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/admin/profile/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/admin/profile"
+      },
+      "check": true
+    },
+    {
+      "src": "^/settings/personal/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/settings/personal"
+      },
+      "check": true
+    },
+    {
+      "src": "^/verify/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/verify"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/features/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/api/features/[slug]?slug=$slug",
+      "check": true
+    },
+    {
+      "src": "^/api/features/\\[slug\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/features/[slug]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/create\\-link(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/create-link?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/create\\-link/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/create-link"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/data\\-collection(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/data-collection?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/data\\-collection/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/data-collection"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/data\\-collection/measurements/(?<measurement_id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/data-collection/measurements/[measurement_id]?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/data\\-collection/measurements/\\[measurement_id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/data-collection/measurements/[measurement_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/data\\-collection/measurements/(?<measurement_id>[^/]+?)/office(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/data-collection/measurements/[measurement_id]/office?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/data\\-collection/measurements/\\[measurement_id\\]/office/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/data-collection/measurements/[measurement_id]/office"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/data\\-collection/measurements/(?<measurement_id>[^/]+?)/office/(?<office_id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/data-collection/measurements/[measurement_id]/office/[office_id]?organisation_id=$organisation_id&measurement_id=$measurement_id&office_id=$office_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/data\\-collection/measurements/\\[measurement_id\\]/office/\\[office_id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/data-collection/measurements/[measurement_id]/office/[office_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/email\\-link(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/email-link?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/email\\-link/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/email-link"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/invite\\-link(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/invite-link?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/invite\\-link/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/invite-link"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/invites(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/invites?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/invites/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/invites"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/invites/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/invites/[id]?organisation_id=$organisation_id&id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/invites/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/invites/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/invoices(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/invoices?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/invoices/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/invoices"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/invoices/(?<invoice_id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/invoices/[invoice_id]?organisation_id=$organisation_id&invoice_id=$invoice_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/invoices/\\[invoice_id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/invoices/[invoice_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/business\\-travel(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/business-travel?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/business\\-travel/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/business-travel"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/business\\-travel/batch(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/business-travel/batch?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/business\\-travel/batch/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/business-travel/batch"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/business\\-travel/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/business-travel/[id]?organisation_id=$organisation_id&measurement_id=$measurement_id&id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/business\\-travel/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/business-travel/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/commutes(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/commutes?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/commutes/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/commutes"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/commutes/batch(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/commutes/batch?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/commutes/batch/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/commutes/batch"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/commutes/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/commutes/[id]?organisation_id=$organisation_id&measurement_id=$measurement_id&id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/commutes/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/commutes/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/compensate(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/compensate?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/compensate/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/compensate"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/compensate/(?<invoice_id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/compensate/[invoice_id]?organisation_id=$organisation_id&measurement_id=$measurement_id&invoice_id=$invoice_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/compensate/\\[invoice_id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/compensate/[invoice_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/expenses(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/expenses?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/expenses/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/expenses"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/expenses/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/expenses/[id]?organisation_id=$organisation_id&measurement_id=$measurement_id&id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/expenses/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/expenses/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/measurement\\-result(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/measurement-result?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/measurement\\-result/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/measurement-result"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/offices(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/offices?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/offices/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/offices"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/utilities(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/utilities?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/utilities/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/utilities"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/utilities/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/utilities/[id]?organisation_id=$organisation_id&measurement_id=$measurement_id&id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/utilities/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/utilities/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/vehicle\\-usage(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/vehicle-usage?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/vehicle\\-usage/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/vehicle-usage"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/vehicle\\-usage/batch(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/vehicle-usage/batch?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/vehicle\\-usage/batch/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/vehicle-usage/batch"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/vehicle\\-usage/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/vehicle-usage/[id]?organisation_id=$organisation_id&measurement_id=$measurement_id&id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/vehicle\\-usage/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/vehicle-usage/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/waste(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/waste?organisation_id=$organisation_id&measurement_id=$measurement_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/waste/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/waste"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/measurements/(?<measurement_id>[^/]+?)/waste/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/measurements/[measurement_id]/waste/[id]?organisation_id=$organisation_id&measurement_id=$measurement_id&id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/measurements/\\[measurement_id\\]/waste/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/measurements/[measurement_id]/waste/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/offices(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/offices?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/offices/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/offices"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/offices/(?<office_id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/offices/[office_id]?organisation_id=$organisation_id&office_id=$office_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/offices/\\[office_id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/offices/[office_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/payment\\-methods(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/payment-methods?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/payment\\-methods/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/payment-methods"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/payment\\-methods/(?<payment_method_id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/payment-methods/[payment_method_id]?organisation_id=$organisation_id&payment_method_id=$payment_method_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/payment\\-methods/\\[payment_method_id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/payment-methods/[payment_method_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/policies(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/policies?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/policies/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/policies"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/subscriptions(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/subscriptions?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/subscriptions/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/subscriptions"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/subscriptions/setup\\-intent(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/subscriptions/setup-intent?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/subscriptions/setup\\-intent/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/subscriptions/setup-intent"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/users/admin(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/users/admin?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/users/admin/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/users/admin"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/users/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/users/[id]?organisation_id=$organisation_id&id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/users/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/users/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/vehicles(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/vehicles?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/vehicles/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/vehicles"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/vehicles/batch(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/vehicles/batch?organisation_id=$organisation_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/vehicles/batch/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/vehicles/batch"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/(?<organisation_id>[^/]+?)/vehicles/(?<vehicle_id>[^/]+?)(?:/)?$",
+      "dest": "/api/organisations/[organisation_id]/vehicles/[vehicle_id]?organisation_id=$organisation_id&vehicle_id=$vehicle_id",
+      "check": true
+    },
+    {
+      "src": "^/api/organisations/\\[organisation_id\\]/vehicles/\\[vehicle_id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/organisations/[organisation_id]/vehicles/[vehicle_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/payment\\-intent/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/payment-intent/[id]?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/payment\\-intent/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/payment-intent/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/projects/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/api/projects/[slug]?slug=$slug",
+      "check": true
+    },
+    {
+      "src": "^/api/projects/\\[slug\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/projects/[slug]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/reduce/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/api/reduce/[slug]?slug=$slug",
+      "check": true
+    },
+    {
+      "src": "^/api/reduce/\\[slug\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/reduce/[slug]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/users/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/api/users/[id]?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/users/\\[id\\]/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/users/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/users/(?<id>[^/]+?)/interests(?:/)?$",
+      "dest": "/api/users/[id]/interests?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/users/\\[id\\]/interests/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/users/[id]/interests"
+      },
+      "check": true
+    },
+    {
+      "src": "^/api/users/(?<id>[^/]+?)/reduction\\-categories(?:/)?$",
+      "dest": "/api/users/[id]/reduction-categories?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/api/users/\\[id\\]/reduction\\-categories/?$",
+      "dest": "/__NEXT_API_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/api/users/[id]/reduction-categories"
+      },
+      "check": true
+    },
+    {
+      "src": "^/blog/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/blog/[slug]?slug=$slug",
+      "check": true
+    },
+    {
+      "src": "^/blog/\\[slug\\]/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/blog/[slug]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/annual/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/history/annual/[id]?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/history/annual/\\[id\\]/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history/annual/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/annual/(?<id>[^/]+?)/edit(?:/)?$",
+      "dest": "/history/annual/[id]/edit?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/history/annual/\\[id\\]/edit/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history/annual/[id]/edit"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/history/[id]?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/history/\\[id\\]/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/(?<id>[^/]+?)/compensate(?:/)?$",
+      "dest": "/history/[id]/compensate?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/history/\\[id\\]/compensate/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history/[id]/compensate"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/(?<id>[^/]+?)/compensate/(?<project_id>[^/]+?)(?:/)?$",
+      "dest": "/history/[id]/compensate/[project_id]?id=$id&project_id=$project_id",
+      "check": true
+    },
+    {
+      "src": "^/history/\\[id\\]/compensate/\\[project_id\\]/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history/[id]/compensate/[project_id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/(?<id>[^/]+?)/compensate/(?<project_id>[^/]+?)/checkout(?:/)?$",
+      "dest": "/history/[id]/compensate/[project_id]/checkout?id=$id&project_id=$project_id",
+      "check": true
+    },
+    {
+      "src": "^/history/\\[id\\]/compensate/\\[project_id\\]/checkout/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history/[id]/compensate/[project_id]/checkout"
+      },
+      "check": true
+    },
+    {
+      "src": "^/history/(?<id>[^/]+?)/compensate/(?<project_id>[^/]+?)/payment(?:/)?$",
+      "dest": "/history/[id]/compensate/[project_id]/payment?id=$id&project_id=$project_id",
+      "check": true
+    },
+    {
+      "src": "^/history/\\[id\\]/compensate/\\[project_id\\]/payment/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/history/[id]/compensate/[project_id]/payment"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/(?<id>[^/]+?)(?:/)?$",
+      "dest": "/measurements/[id]?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/measurements/\\[id\\]/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements/[id]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/(?<id>[^/]+?)/business\\-travel(?:/)?$",
+      "dest": "/measurements/[id]/business-travel?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/measurements/\\[id\\]/business\\-travel/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements/[id]/business-travel"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/(?<id>[^/]+?)/details(?:/)?$",
+      "dest": "/measurements/[id]/details?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/measurements/\\[id\\]/details/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements/[id]/details"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/(?<id>[^/]+?)/expenses(?:/)?$",
+      "dest": "/measurements/[id]/expenses?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/measurements/\\[id\\]/expenses/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements/[id]/expenses"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/(?<id>[^/]+?)/offices(?:/)?$",
+      "dest": "/measurements/[id]/offices?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/measurements/\\[id\\]/offices/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements/[id]/offices"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/(?<id>[^/]+?)/result(?:/)?$",
+      "dest": "/measurements/[id]/result?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/measurements/\\[id\\]/result/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements/[id]/result"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/(?<id>[^/]+?)/review(?:/)?$",
+      "dest": "/measurements/[id]/review?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/measurements/\\[id\\]/review/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements/[id]/review"
+      },
+      "check": true
+    },
+    {
+      "src": "^/measurements/(?<id>[^/]+?)/vehicles(?:/)?$",
+      "dest": "/measurements/[id]/vehicles?id=$id",
+      "check": true
+    },
+    {
+      "src": "^/measurements/\\[id\\]/vehicles/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/measurements/[id]/vehicles"
+      },
+      "check": true
+    },
+    {
+      "src": "^/offers/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/offers/[slug]?slug=$slug",
+      "check": true
+    },
+    {
+      "src": "^/offers/\\[slug\\]/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/offers/[slug]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/offset/projects/(?<slug>[^/]+?)(?:/)?$",
+      "dest": "/offset/projects/[slug]?slug=$slug",
+      "check": true
+    },
+    {
+      "src": "^/offset/projects/\\[slug\\]/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/offset/projects/[slug]"
+      },
+      "check": true
+    },
+    {
+      "src": "^/offset/projects/(?<slug>[^/]+?)/payment(?:/)?$",
+      "dest": "/offset/projects/[slug]/payment?slug=$slug",
+      "check": true
+    },
+    {
+      "src": "^/offset/projects/\\[slug\\]/payment/?$",
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "headers": {
+        "x-nextjs-page": "/offset/projects/[slug]/payment"
+      },
       "check": true
     },
     {
@@ -91,11 +1784,14 @@
     },
     {
       "src": "/.*",
-      "dest": "/404",
-      "status": 404
+      "dest": "/__NEXT_PAGE_LAMBDA_0",
+      "status": 404,
+      "headers": {
+        "x-nextjs-page": "/_error"
+      }
     }
   ],
-  "buildId": "prO4zswvGy6pHIAtUtviK",
+  "buildId": "lDoX7RBEQ31kzKIJJbkVC",
   "prerenders": {},
   "staticFilesArchive": "static-website-files.zip",
   "version": 1,
