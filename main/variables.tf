@@ -1,5 +1,4 @@
 
-variable "iam_user" {}
 
 variable "aws_key" {}
 
