@@ -9,16 +9,14 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.0"
+      version = "~> 4.0"
     }
 
     archive = {
-      version = "= 1.3.0"
       source  = "hashicorp/archive"
     }
 
     local = {
-      version = "= 1.4.0"
       source  = "hashicorp/local"
     }
   }
@@ -48,7 +46,7 @@ resource "random_string" "unique_deployment_id" {
 }
 
 module "tf_next" {
-  source = "github.com/diggerhq/terraform-aws-next-js"
+  source = "milliHQ/next-js/aws"
 
   cloudfront_aliases = local.aliases
   cloudfront_acm_certificate_arn = local.acm_certificate_arn
