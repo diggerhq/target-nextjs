@@ -30,6 +30,11 @@ provider "aws" {
   secret_key = var.aws_secret
 }
 
+provider "aws" {
+  alias  = "global_region"
+  region = "us-east-1"
+}
+
 resource "random_string" "unique_deployment_id" {
   length  = 6
   special = false
