@@ -41,13 +41,3 @@ resource "random_string" "unique_deployment_id" {
   lower   = true
   upper   = false
 }
-
-
-# digger account provider
-provider "aws" {
-  alias = "digger"
-  region  = var.region
-  # profile = var.aws_profile
-  access_key = var.digger_aws_key
-  secret_key = var.digger_aws_secret
-}
