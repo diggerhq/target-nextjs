@@ -13,3 +13,5 @@ variable "project_name" {}
 variable "environment" {}
 
 variable "region" {}
+
+variable "nextjs_tf_dir" {}
