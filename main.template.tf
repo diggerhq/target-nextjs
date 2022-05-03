@@ -33,6 +33,8 @@ provider "aws" {
 provider "aws" {
   alias  = "global_region"
   region = "us-east-1"
+  access_key = var.aws_key
+  secret_key = var.aws_secret
 }
 
 resource "random_string" "unique_deployment_id" {
