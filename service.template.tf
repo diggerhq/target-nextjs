@@ -27,6 +27,7 @@ module "tf_next" {
   //cloudfront_acm_certificate_arn = local.acm_certificate_arn
   next_tf_dir               = var.nextjs_tf_dir
   create_image_optimization = false
+  use_awscli_for_static_upload = true
   deployment_name = "${var.environment}-${random_string.unique_deployment_id.result}"
 }
 
