@@ -18,7 +18,7 @@ locals {
 
 
 module "tf_next" {
-  source = "milliHQ/next-js/aws"
+  source = "github.com/veziak/terraform-aws-next-js"
 
   providers = {
     aws.global_region = aws.global_region
