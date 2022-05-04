@@ -4,7 +4,10 @@ terraform {
 
   # vars are not allowed in this block
   # see: https://github.com/hashicorp/terraform/issues/22088
-  backend "s3" {}
+  backend "s3" {
+  access_key = var.dggr_aws_key
+  secret_key = var.dggr_aws_secret
+  }
 
   required_providers {
     aws = {
