@@ -56,3 +56,8 @@ output "nextjs_deployment_name" {
 output "static_files_archive" {
   value = module.tf_next.static_files_archive
 }
+
+output "static_upload_bucket_id" {
+  value = module.tf_next.static_upload_bucket_id
+}
+
