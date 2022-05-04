@@ -5,8 +5,8 @@ terraform {
   # vars are not allowed in this block
   # see: https://github.com/hashicorp/terraform/issues/22088
   backend "s3" {
-  access_key = var.dggr_aws_key
-  secret_key = var.dggr_aws_secret
+    access_key = "{{dggr_aws_key}}"
+    secret_key = "{{dggr_aws_secret}}"
   }
 
   required_providers {
@@ -16,11 +16,11 @@ terraform {
     }
 
     archive = {
-      source  = "hashicorp/archive"
+      source = "hashicorp/archive"
     }
 
     local = {
-      source  = "hashicorp/local"
+      source = "hashicorp/local"
     }
   }
 }
@@ -28,14 +28,14 @@ terraform {
 # Provider used for creating the Lambda@Edge function which must be deployed
 # to us-east-1 region (Should not be changed)
 provider "aws" {
-  region  = var.region
+  region     = var.region
   access_key = var.aws_key
   secret_key = var.aws_secret
 }
 
 provider "aws" {
-  alias  = "global_region"
-  region = "us-east-1"
+  alias      = "global_region"
+  region     = "us-east-1"
   access_key = var.aws_key
   secret_key = var.aws_secret
 }
