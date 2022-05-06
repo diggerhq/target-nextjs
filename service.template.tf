@@ -46,6 +46,10 @@ module "tf_next" {
       evaluate_target_health = false
     }
   }
+
+output "dggr_route53_record" {
+  value = aws_route53_record.{{service_name}}_dggr_website_cdn_root_record.name
+}
 {% endif %}
 
 
