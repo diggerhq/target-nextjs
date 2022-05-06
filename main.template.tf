@@ -40,6 +40,13 @@ provider "aws" {
   secret_key = var.aws_secret
 }
 
+provider "aws" {
+  alias      = "digger"
+  region     = var.region
+  access_key = var.dggr_aws_key
+  secret_key = var.dggr_aws_secret
+}
+
 resource "random_string" "unique_deployment_id" {
   length  = 6
   special = false
