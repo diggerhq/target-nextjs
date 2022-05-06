@@ -25,7 +25,7 @@ module "tf_next" {
   }
 
   cloudfront_aliases = ["{{dggr_subdomain}}.{{dggr_hostname}}"]
-  //cloudfront_acm_certificate_arn = local.acm_certificate_arn
+  cloudfront_acm_certificate_arn = "{{cloudfront_acm_certificate_arn}}"
   next_tf_dir               = var.nextjs_tf_dir
   create_image_optimization = false
   use_awscli_for_static_upload = true
