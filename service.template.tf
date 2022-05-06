@@ -24,6 +24,7 @@ module "tf_next" {
     aws.global_region = aws.global_region
   }
 
+  cloudfront_aliases = ["{{dggr_subdomain}}.{{dggr_hostname}}"]
   //cloudfront_acm_certificate_arn = local.acm_certificate_arn
   next_tf_dir               = var.nextjs_tf_dir
   create_image_optimization = false
