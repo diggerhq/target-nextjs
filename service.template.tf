@@ -37,7 +37,7 @@ module "tf_next" {
   resource "aws_route53_record" "{{service_name}}_dggr_website_cdn_root_record" {
     provider = aws.digger
     zone_id = "{{dggr_zone_id}}"
-    name    = local.{{service_name}}_dggr_website_domain
+    name    = "{{dggr_subdomain}}"
     type    = "A"
 
     alias {
